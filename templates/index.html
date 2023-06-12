@@ -2,6 +2,7 @@
     <head>
         <title>Item Details</title>
         <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+        <script src="{{ url_for('static', path='/script.js') }}"></script>
     </head>
     <body>
         {% block header %}
@@ -18,6 +19,10 @@
 
         {% extends 'map.html' %}
     </body>
+    {% block javascript %}
+        
+    {% endblock %}
 </html>
 
 
+leaflet-popup-content

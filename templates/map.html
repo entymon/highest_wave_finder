@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8050c65dd23674ac754c5b795a0822c2 {
+                #map_2560b8940156e777c8087362c1d0c9cb {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +39,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_8050c65dd23674ac754c5b795a0822c2" ></div>
+            <div class="folium-map" id="map_2560b8940156e777c8087362c1d0c9cb" ></div>
         
 </body>
 <script>
     
     
-            var map_8050c65dd23674ac754c5b795a0822c2 = L.map(
-                "map_8050c65dd23674ac754c5b795a0822c2",
+            var map_2560b8940156e777c8087362c1d0c9cb = L.map(
+                "map_2560b8940156e777c8087362c1d0c9cb",
                 {
                     center: [53.073635, 8.806422],
                     crs: L.CRS.EPSG3857,
@@ -60,10 +60,21 @@
 
         
     
-            var tile_layer_004edc400afc436417ec6dace420793c = L.tileLayer(
+            var tile_layer_86471fd011a9198c186040e8365e7591 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_8050c65dd23674ac754c5b795a0822c2);
+            ).addTo(map_2560b8940156e777c8087362c1d0c9cb);
         
+    
+                var lat_lng_popup_fa50e91b769ca73aeda5ae63a6cd221a = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_fa50e91b769ca73aeda5ae63a6cd221a
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_2560b8940156e777c8087362c1d0c9cb);
+                    }
+                map_2560b8940156e777c8087362c1d0c9cb.on('click', latLngPop);
+            
 </script>
 </html>
