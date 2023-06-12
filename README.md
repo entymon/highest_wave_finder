@@ -31,3 +31,12 @@ OR
 `docker run -d --name high-wave-container -p 8080:8080 high-wave:1` // run in background
 
 3. The environment should be available under URL: `http://0.0.0.0:8080`
+
+## Useful links
+- [Folium](https://python-visualization.github.io/folium/)
+- [xArray](https://docs.xarray.dev/en/stable/index.html)
+- [FastAPI](https://fastapi.tiangolo.com/lo/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.1.x/templates/#template-inheritance)
+
+
+
