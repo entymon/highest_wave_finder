@@ -33,10 +33,9 @@ class GetLatLngPopup(LatLngPopup):
         super(GetLatLngPopup, self).__init__()
         self._name = 'GetLatLngPopup'
     
-def generate_map():
+def generate_map(lat: float = 53.073635, lng: float = 8.806422):
 
-    m = folium.Map(location=[53.073635, 8.806422], zoom_start=15, tiles='Stamen Terrain')
-    # m.add_child(folium.LatLngPopup())
+    m = folium.Map(location=[lat, lng], zoom_start=5, tiles='Stamen Terrain')
 
     GetLatLngPopup().add_to(m)
 
@@ -53,6 +52,14 @@ def read_root():
     }
 
 @app.get("/", response_class=HTMLResponse)
-async def read_item(request: Request):
-    generate_map()
-    return templates.TemplateResponse("index.html", {"request": request })    
+async def read_item(request: Request, lat: str = '0', lng: str = ''):
+    template_data = { 
+        "request": request,
+        "latitude": lat,
+        "longitude": lng
+    }
+
+
+
+    generate_map(float(lat), float(lng))
+    return templates.TemplateResponse("index.html", template_data)    

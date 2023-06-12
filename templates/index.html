@@ -10,11 +10,18 @@
         {% endblock %}
 
         {% block content %}
-            <form method="post">
-            <label for="age">Age</label>
-            <input name="age" id="age" value="{{ request.form['age'] }}">
-            <input type="submit" value="Search">
-            </form>
+            <div class="coordinates-container">
+                <div class="left-box">
+                    <h2>Latitude</h2>
+                    <p>{{ latitude }}</p>
+                </div>
+                <div class="left-box">
+                    <h2>Longitude</h2>
+                    <p>{{ longitude }}</p>
+                </div>
+                <div class="clear-box"></div>
+            </div>
+
         {% endblock %}
 
         {% extends 'map.html' %}
