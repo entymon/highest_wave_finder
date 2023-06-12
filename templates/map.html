@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_5302eebe8bcca31005500ef6be83359d {
+                #map_d7f883df59a8e8dea595c2312258548b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,16 +39,16 @@
 <body>
     
     
-            <div class="folium-map" id="map_5302eebe8bcca31005500ef6be83359d" ></div>
+            <div class="folium-map" id="map_d7f883df59a8e8dea595c2312258548b" ></div>
         
 </body>
 <script>
     
     
-            var map_5302eebe8bcca31005500ef6be83359d = L.map(
-                "map_5302eebe8bcca31005500ef6be83359d",
+            var map_d7f883df59a8e8dea595c2312258548b = L.map(
+                "map_d7f883df59a8e8dea595c2312258548b",
                 {
-                    center: [58.7133287, 1.8017578],
+                    center: [76.5126557, 34.0576172],
                     crs: L.CRS.EPSG3857,
                     zoom: 5,
                     zoomControl: true,
@@ -60,22 +60,44 @@
 
         
     
-            var tile_layer_7a7e745e5e4826ba95d37dfafeaceadb = L.tileLayer(
+            var tile_layer_312d27ab58b118fdc8be71cd707d4c33 = L.tileLayer(
                 "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
                 {"attribution": "Map tiles by \u003ca target=\"_blank\" href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_5302eebe8bcca31005500ef6be83359d);
+            ).addTo(map_d7f883df59a8e8dea595c2312258548b);
         
     
-                var get_lat_lng_popup_50c764c8c307721ca52541fc4caf0103 = L.popup();
+                var get_lat_lng_popup_736426dfbef96da5515346683e0a58cb = L.popup();
                 function latLngPop(e) {
-                    get_lat_lng_popup_50c764c8c307721ca52541fc4caf0103
+                    window.location="/?lat=" + e.latlng.lat.toFixed(7) + "&lng=" + e.latlng.lng.toFixed(7);
+                    get_lat_lng_popup_736426dfbef96da5515346683e0a58cb
                         .setLatLng(e.latlng)
                         .setContent("Latitude: " + e.latlng.lat.toFixed(7) +
                                     "<br>Longitude: " + e.latlng.lng.toFixed(7) +
                                     "<br><a href='/?lat=" + e.latlng.lat.toFixed(7) + "&lng=" + e.latlng.lng.toFixed(7) + "'>get wave</a>")
-                        .openOn(map_5302eebe8bcca31005500ef6be83359d);
+                        .openOn(map_d7f883df59a8e8dea595c2312258548b);
                     }
-                map_5302eebe8bcca31005500ef6be83359d.on('click', latLngPop);
+                map_d7f883df59a8e8dea595c2312258548b.on('click', latLngPop);
             
+    
+            var marker_61c2ad04041110aca191b46623c6f41c = L.marker(
+                [76.5126557, 34.0576172],
+                {}
+            ).addTo(map_d7f883df59a8e8dea595c2312258548b);
+        
+    
+        var popup_b47ed6d3b29e1fce08a932bb13980ab8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cd8203d9d39c17b3290d17624cb3e21c = $(`<div id="html_cd8203d9d39c17b3290d17624cb3e21c" style="width: 100.0%; height: 100.0%;">Latitude: 76.5126557; Longitude: 34.0576172</div>`)[0];
+                popup_b47ed6d3b29e1fce08a932bb13980ab8.setContent(html_cd8203d9d39c17b3290d17624cb3e21c);
+            
+        
+
+        marker_61c2ad04041110aca191b46623c6f41c.bindPopup(popup_b47ed6d3b29e1fce08a932bb13980ab8)
+        ;
+
+        
+    
 </script>
 </html>
