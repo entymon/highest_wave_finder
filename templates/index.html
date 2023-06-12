@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Item Details</title>
+        <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    </head>
+    <body>
+        {% block header %}
+            <h1>Select the place on the map</h1>
+        {% endblock %}
+
+        {% block content %}
+            <form method="post">
+            <label for="age">Age</label>
+            <input name="age" id="age" value="{{ request.form['age'] }}">
+            <input type="submit" value="Search">
+            </form>
+        {% endblock %}
+
+        {% extends 'map.html' %}
+    </body>
+</html>
+
+
