@@ -20,13 +20,7 @@ class GetLatLngPopup(LatLngPopup):
                 var {{this.get_name()}} = L.popup();
                 function latLngPop(e) {
                     window.location="/?lat=" + e.latlng.lat.toFixed(7) + "&lng=" + e.latlng.lng.toFixed(7);
-                    {{this.get_name()}}
-                        .setLatLng(e.latlng)
-                        .setContent("Latitude: " + e.latlng.lat.toFixed(7) +
-                                    "<br>Longitude: " + e.latlng.lng.toFixed(7) +
-                                    "<br><a href='/?lat=" + e.latlng.lat.toFixed(7) + "&lng=" + e.latlng.lng.toFixed(7) + "'>get wave</a>")
-                        .openOn({{this._parent.get_name()}});
-                    }
+                }
                 {{this._parent.get_name()}}.on('click', latLngPop);
             {% endmacro %}
             """)
