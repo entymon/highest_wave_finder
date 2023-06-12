@@ -31,5 +31,6 @@
 Dump libs - run on virtual environment
 - `pip freeze > requirements.txt`
 
-
+## Layout
+<img src="static/screenshot.jpg" width="128"/>
 
